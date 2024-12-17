@@ -1,3 +1,6 @@
+
+// TODO: design a switcher and make it reusable
+
 export const DarkModeSwitch = () => {
   
   const clickHandler = () => {

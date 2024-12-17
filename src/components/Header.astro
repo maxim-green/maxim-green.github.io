@@ -1,0 +1,35 @@
+---
+import {DarkModeSwitch} from '../ui/DarkModeSwitch';
+import {Link} from '../ui/Link';
+
+const pages = [
+  { name: 'Home', href: '/' },
+  { name: 'Resume', href: '/resume' },
+  { name: 'Projects', href: '/projects' },
+  { name: 'Blog', href: '/blog' },
+];
+
+const isActive = (href: string) => {
+  return Astro.url.pathname === href;
+}
+---
+
+<header class="sticky top-0 w-full bg-white dark:bg-gray-800 text-gray-800 dark:text-white">
+  <div class="container h-16 mx-auto flex items-center justify-between">
+    <div>
+      LOGO
+    </div>
+    <nav class="ml-auto">
+      <ul class="flex items-center justify-between">
+        {pages.map(({name, href}) => (
+          <li>
+            <Link href={href} active={isActive(href)}>{name}</Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
+    <div>
+      <DarkModeSwitch client:load />
+    </div>
+  </div>
+</header>

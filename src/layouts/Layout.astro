@@ -1,23 +1,9 @@
 ---
-import {Header} from '../components/Header';
-import {Content} from '../components/Content';
-import {Footer} from '../components/Footer';
-import {Link} from '../components/Link';
-import {DarkModeSwitch} from '../components/DarkModeSwitch';
-import {clsx} from 'clsx';
-
-const pages = [
-  { name: 'Home', href: '/' },
-  { name: 'Resume', href: '/resume' },
-  { name: 'Projects', href: '/projects' },
-  { name: 'Blog', href: '/blog' },
-];
-
-const isActive = (href: string) => {
-  return Astro.url.pathname === href;
-}
-
+import Header from '../components/Header.astro';
+import Content from '../components/Content.astro';
+import Footer from '../components/Footer.astro';
 ---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -28,30 +14,10 @@ const isActive = (href: string) => {
 		<title>Astro Basics</title>
 	</head>
 	<body class="bg-white dark:bg-gray-800 text-gray-800 dark:text-white">
-    <header class="sticky top-0 w-full bg-white dark:bg-gray-800 text-gray-800 dark:text-white">
-      <div class="container h-16 mx-auto flex items-center justify-between">
-        <div>
-          LOGO
-        </div>
-        <nav class="ml-auto">
-          <ul class="flex items-center justify-between">
-            {pages.map(({name, href}) => (
-              <li>
-                <Link href={href} active={isActive(href)}>{name}</Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-        <div>
-          <DarkModeSwitch client:load />
-        </div>
-      </div>
-    </header>
-    
+    <Header/>
     <Content>
       <slot />
     </Content>
     <Footer/>
 	</body>
 </html>
-
