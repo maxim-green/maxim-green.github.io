@@ -1,3 +1,21 @@
+---
+import {Header} from '../components/Header';
+import {Content} from '../components/Content';
+import {Footer} from '../components/Footer';
+import {Link} from '../components/Link';
+
+const pages = [
+  { name: 'Home', href: '/' },
+  { name: 'Resume', href: '/resume' },
+  { name: 'Projects', href: '/projects' },
+  { name: 'Blog', href: '/blog' },
+];
+
+const isActive = (href: string) => {
+  return Astro.url.pathname === href;
+}
+
+---
 <!doctype html>
 <html lang="en">
 	<head>
@@ -7,16 +25,40 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
 	</head>
-	<body>
-		<slot />
+	<body class="bg-white dark:bg-gray-800 text-gray-800 dark:text-white">
+    <header class="sticky top-0 w-full bg-white dark:bg-gray-800 text-gray-800 dark:text-white">
+      <div class="container h-16 mx-auto flex items-center justify-between">
+        <div>
+          LOGO
+        </div>
+        <nav>
+          <ul class="flex items-center justify-between">
+            {pages.map(({name, href}) => (
+              <li>
+                <Link href={href} active={isActive(href)}>{name}</Link>
+              </li>
+            ))}
+            <!--<li>-->
+            <!--  <Link href="/">Home</Link>-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--  <Link href="/resume">Resume</Link>-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--  <Link href="/projects">Projects</Link>-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--  <Link href="/blog">Blog</Link>-->
+            <!--</li>-->
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+    <Content>
+      <slot />
+    </Content>
+    <Footer/>
 	</body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
