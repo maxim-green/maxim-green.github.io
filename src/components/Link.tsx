@@ -12,8 +12,8 @@ export const Link = (
     <a 
       {...props} 
       className={clsx(
-        'text-lg text-amber-50 p-2 transition hover:underline underline-offset-4 decoration-dotted', 
-        active && 'text-blue-300',
+        'text-lg text-gray-800 dark:text-white p-2 transition hover:underline underline-offset-4 decoration-dotted', 
+        active && 'text-blue-400 dark:text-blue-400',
         props.className
       )}
     >

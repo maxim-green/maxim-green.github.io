@@ -3,6 +3,8 @@ import {Header} from '../components/Header';
 import {Content} from '../components/Content';
 import {Footer} from '../components/Footer';
 import {Link} from '../components/Link';
+import {DarkModeSwitch} from '../components/DarkModeSwitch';
+import {clsx} from 'clsx';
 
 const pages = [
   { name: 'Home', href: '/' },
@@ -31,27 +33,18 @@ const isActive = (href: string) => {
         <div>
           LOGO
         </div>
-        <nav>
+        <nav class="ml-auto">
           <ul class="flex items-center justify-between">
             {pages.map(({name, href}) => (
               <li>
                 <Link href={href} active={isActive(href)}>{name}</Link>
               </li>
             ))}
-            <!--<li>-->
-            <!--  <Link href="/">Home</Link>-->
-            <!--</li>-->
-            <!--<li>-->
-            <!--  <Link href="/resume">Resume</Link>-->
-            <!--</li>-->
-            <!--<li>-->
-            <!--  <Link href="/projects">Projects</Link>-->
-            <!--</li>-->
-            <!--<li>-->
-            <!--  <Link href="/blog">Blog</Link>-->
-            <!--</li>-->
           </ul>
         </nav>
+        <div>
+          <DarkModeSwitch client:load />
+        </div>
       </div>
     </header>
     

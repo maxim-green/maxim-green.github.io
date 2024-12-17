@@ -1,4 +1,7 @@
 import {Link} from './Link.tsx';
+import {DarkModeSwitch} from './DarkModeSwitch.tsx';
+
+
 
 export const Header = () => {
   return (
@@ -23,6 +26,7 @@ export const Header = () => {
             </li>
           </ul>
         </nav>
+        <DarkModeSwitch/>
       </div>
     </header>
   )
