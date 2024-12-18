@@ -1,18 +1,18 @@
 {
   "basics": {
-    "name": "John Doe",
-    "label": "Programmer",
-    "image": "",
-    "email": "john@gmail.com",
-    "phone": "(912) 555-4321",
-    "url": "https://johndoe.com",
-    "summary": "A summary of John Doe…",
+    "name": "Maxim Grin",
+    "label": "Frontend developer",
+    "image": "/resume-image.jpg",
+    "email": "maxgrinbox@gmail.com",
+    "phone": "(000) 000-0000",
+    "url": "https://maxim-green.github.io/",
+    "summary": "Самостоятельный и проактивный Frontend-разработчик с опытом создания сложных интерфейсов для крупных проектов. Умею работать в команде: эффективно взаимодействую с коллегами и сторонними специалистами, легко нахожу общий язык.\n\nРегулярно повышаю квалификацию, слежу за трендами и участвую в профессиональных мероприятиях. Пишу чистый, поддерживаемый код, внедряю современные подходы и делюсь знаниями с командой.",
     "location": {
       "address": "2712 Broadway St",
       "postalCode": "CA 94115",
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California"
+      "city": "Saint-Petersburg",
+      "countryCode": "RU",
+      "region": "Leningradskaya Oblast'"
     },
     "profiles": [{
       "network": "Twitter",
