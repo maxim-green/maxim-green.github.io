@@ -5,28 +5,47 @@ import resumeData from '../data/resume.json';
 ---
 
 <Layout>
-  <div class="flex align-middle justify-center mb-8">
-    <img
-      class="h-64 w-64 rounded-full"
-      src={resumeData.basics.image}
-      alt={resumeData.basics.name}
-    />
-  </div>
-  <h1 class="text-center text-5xl font-semibold mb-4">
-    {resumeData.basics.name}
-  </h1>
-  <div class="flex justify-center gap-8">
-    <div class="flex align-middle gap-2">
-      <Icon name="briefcase" class="text-2xl" />
-      {resumeData.basics.label}
+  <div class="flex flex-col gap-8 mt-16">
+    <div class="flex align-middle justify-center mb-8">
+      <img
+        class="h-64 w-64 rounded-full"
+        src={resumeData.basics.image}
+        alt={resumeData.basics.name}
+      />
     </div>
-    <div class="flex align-middle gap-2">
-      <Icon name="location" class="text-2xl" />
-      {resumeData.basics.location.city}
+    <h1 class="text-center text-5xl font-semibold mb-4">
+      {resumeData.basics.name}
+    </h1>
+    <div class="flex justify-center gap-8">
+      <div class="flex align-middle gap-2">
+        <Icon name="briefcase" class="text-2xl" />
+        {resumeData.basics.label}
+      </div>
+      <div class="flex align-middle gap-2">
+        <Icon name="location" class="text-2xl" />
+        {resumeData.basics.location.city}
+      </div>
+      <div class="flex align-middle gap-2">
+        <Icon name="social-telegram" class="text-2xl" />
+        {resumeData.basics.location.city}
+      </div>
     </div>
-    <div class="flex align-middle gap-2">
-      <Icon name="social-telegram" class="text-2xl" />
-      {resumeData.basics.location.city}
+    <div class="flex gap-8">
+      <h2 class="text-2xl font-semibold w-1/3">About me</h2>
+      <div class="text-lg text-gray-500 dark:text-gray-400 w-2/3">
+        {resumeData.basics.summary}
+      </div>
+    </div>
+    <div class="flex gap-8">
+      <h2 class="text-2xl font-semibold w-1/3">Experience</h2>
+      <div class="text-lg text-gray-500 dark:text-gray-400 w-2/3 flex flex-col gap-4">
+        <div class="border rounded-2xl px-6 py-4 text-lg text-gray-500 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 rounded-lg">
+          {resumeData.basics.summary}
+        </div>
+        <div class="border rounded-2xl px-6 py-4 text-lg text-gray-500 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 rounded-lg">
+          {resumeData.basics.summary}
+        </div>
+      </div>
     </div>
   </div>
 </Layout>
