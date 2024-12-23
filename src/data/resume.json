@@ -1,12 +1,12 @@
 {
   "basics": {
-    "name": "Maxim Grin",
+    "name": "John Doe",
     "label": "Frontend developer",
-    "image": "/resume-image.jpg",
+    "image": "https://placehold.co/400",
     "email": "maxgrinbox@gmail.com",
     "phone": "(000) 000-0000",
     "url": "https://maxim-green.github.io/",
-    "summary": "Самостоятельный и проактивный Frontend-разработчик с опытом создания сложных интерфейсов для крупных проектов. Умею работать в команде: эффективно взаимодействую с коллегами и сторонними специалистами, легко нахожу общий язык.\n\nРегулярно повышаю квалификацию, слежу за трендами и участвую в профессиональных мероприятиях. Пишу чистый, поддерживаемый код, внедряю современные подходы и делюсь знаниями с командой.",
+    "summary": "t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
     "location": {
       "address": "2712 Broadway St",
       "postalCode": "CA 94115",

@@ -2,7 +2,10 @@
 import { Icon } from 'astro-icon/components';
 ---
 
-<label class="swap swap-rotate">
+<label 
+  class="swap swap-rotate" 
+  style="width: 24px; height: 24px; content-visibility: hidden;"
+>
   <input type="checkbox" id="themeController" class="theme-controller"/>
   <Icon 
     name="sun"
@@ -18,6 +21,9 @@ import { Icon } from 'astro-icon/components';
   const theme = localStorage.getItem("theme");
   const themeController = document.getElementById('themeController') as HTMLInputElement;
   themeController.checked = theme === 'light';
+  if (themeController.parentElement) {
+    themeController.parentElement.style.contentVisibility = 'visible';
+  }
   themeController?.addEventListener('change', (e) => {
     const target = e.target as HTMLInputElement;
     document.documentElement.dataset.theme = target.checked ? 'light' : 'dark';
