@@ -6,7 +6,7 @@ import Footer from '../components/Footer.astro';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -22,3 +22,8 @@ import Footer from '../components/Footer.astro';
     <Footer/>
 	</body>
 </html>
+
+<script>
+  const theme = localStorage.getItem('theme');
+  window.document.documentElement.dataset.theme = theme || 'light';
+</script>
