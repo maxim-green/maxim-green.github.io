@@ -1,13 +1,11 @@
 ---
 import ThemeController from './ThemeController.astro';
 import {clsx} from 'clsx';
+import {getPages} from '../utils/getPages';
 
-const pages = [
-  { name: 'Home', href: '/' },
-  { name: 'Resume', href: '/resume' },
-  { name: 'Projects', href: '/projects' },
-  { name: 'Blog', href: '/blog' },
-];
+const pages = getPages({
+  indexPageName: 'Resume'
+});
 
 const isActive = (href: string) => {
   return Astro.url.pathname === href;
@@ -16,10 +14,13 @@ const isActive = (href: string) => {
 
 <header class="sticky top-0 w-full bg-white dark:bg-gray-800 text-gray-800 dark:text-white">
   <div class="container h-auto mx-auto py-4 flex items-center justify-between gap-4">
-    <div class="text-xl font-mono font-bold">
+    <a 
+      class="text-xl font-mono font-bold"
+      href="/"
+    >
       {'<mg/>'}
-    </div>
-    <nav class="ml-auto">
+    </a>
+    <nav class="mx-auto">
       <ul class="flex items-center justify-between gap-4">
         {pages.map(({name, href}) => (
           <li>
