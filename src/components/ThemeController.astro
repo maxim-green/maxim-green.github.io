@@ -18,16 +18,20 @@ import { Icon } from 'astro-icon/components';
 </label>
 
 <script>
-  const theme = localStorage.getItem("theme");
-  const themeController = document.getElementById('themeController') as HTMLInputElement;
-  themeController.checked = theme === 'light';
-  if (themeController.parentElement) {
-    themeController.parentElement.style.contentVisibility = 'visible';
+  const initThemeController = () => {
+    const theme = localStorage.getItem("theme");
+    const themeController = document.getElementById('themeController') as HTMLInputElement;
+    themeController.checked = theme === 'light';
+    if (themeController.parentElement) {
+      themeController.parentElement.style.contentVisibility = 'visible';
+    }
+    themeController?.addEventListener('change', (e) => {
+      const target = e.target as HTMLInputElement;
+      document.documentElement.dataset.theme = target.checked ? 'light' : 'dark';
+      localStorage.setItem('theme', target.checked ? 'light' : 'dark');
+      console.log(target.checked)
+    })
   }
-  themeController?.addEventListener('change', (e) => {
-    const target = e.target as HTMLInputElement;
-    document.documentElement.dataset.theme = target.checked ? 'light' : 'dark';
-    localStorage.setItem('theme', target.checked ? 'light' : 'dark');
-    console.log(target.checked)
-  })
+  document.addEventListener('astro:after-swap', initThemeController);
+  initThemeController();
 </script>
