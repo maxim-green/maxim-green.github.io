@@ -16,7 +16,7 @@ import Footer from '../components/Footer.astro';
 		<title>Astro Basics</title>
     <ClientRouter/>
 	</head>
-	<body class="bg-white text-gray-800 overflow-y-scroll scroll flex flex-col min-h-screen">
+	<body class="bg-white text-gray-800 overflow-y-scroll scrollbar dark:scrollbar-dark flex flex-col min-h-screen">
     <Header/>
     <Content>
       <slot />
@@ -26,6 +26,9 @@ import Footer from '../components/Footer.astro';
 </html>
 
 <script>
-  const theme = localStorage.getItem('theme');
-  window.document.documentElement.dataset.theme = theme || 'light';
+  const initTheme = () => {
+    const theme = localStorage.getItem('theme');
+    window.document.documentElement.dataset.theme = theme || 'light';
+  }
+  document.addEventListener('astro:page-load', initTheme);
 </script>

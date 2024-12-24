@@ -37,6 +37,6 @@ import { Icon } from 'astro-icon/components';
       }
     })
   }
-  document.addEventListener('astro:after-swap', initThemeController);
+  document.addEventListener('astro:page-load', initThemeController);
   initThemeController();
 </script>
