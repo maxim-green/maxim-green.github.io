@@ -2,26 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+*,
+*:hover {
+  scrollbar-color: auto;
+}
+
 @layer utilities {
-  .scroll {
+  .scrollbar {
     /* width */
     &::-webkit-scrollbar {
       width: 0.5rem;
     }
-
-    /* Track */
-    &::-webkit-scrollbar-track {
-      background: rgb(31 41 55);
-    }
-
+    
     /* Handle */
     &::-webkit-scrollbar-thumb {
       background: #acacac;
     }
-
+    
     /* Handle on hover */
     &::-webkit-scrollbar-thumb:hover {
       background: rgb(147 197 253);
+    }
+    
+    &::-webkit-scrollbar-track {
+      background: transparent;
     }
   }
 }

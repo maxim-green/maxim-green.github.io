@@ -1,0 +1,42 @@
+---
+import { Icon } from 'astro-icon/components';
+---
+
+<label 
+  class="swap swap-rotate" 
+  style="width: 24px; height: 24px; content-visibility: hidden;"
+>
+  <input type="checkbox" id="themeController" class="theme-controller"/>
+  <Icon 
+    name="sun"
+    class="swap-off h-6 w-6 fill-current"
+  />
+  <Icon 
+    name="moon"
+    class="swap-on h-6 w-6 fill-current"
+  />
+</label>
+
+<script>
+  const initThemeController = () => {
+    const theme = localStorage.getItem("theme");
+    const themeController = document.getElementById('themeController') as HTMLInputElement;
+    themeController.checked = theme === 'light';
+    if (themeController.parentElement) {
+      themeController.parentElement.style.contentVisibility = 'visible';
+    }
+    themeController?.addEventListener('change', (e) => {
+      const target = e.target as HTMLInputElement;
+      localStorage.setItem('theme', target.checked ? 'light' : 'dark');
+      if (document.startViewTransition) {
+        document.startViewTransition(() => {
+          document.documentElement.dataset.theme = target.checked ? 'light' : 'dark';
+        })
+      } else {
+        document.documentElement.dataset.theme = target.checked ? 'light' : 'dark';
+      }
+    })
+  }
+  document.addEventListener('astro:page-load', initThemeController);
+  initThemeController();
+</script>

@@ -1,33 +1,22 @@
 ---
 import '../styles/global.css';
+import { ClientRouter } from 'astro:transitions';
 import Header from '../components/Header.astro';
 import Content from '../components/Content.astro';
 import Footer from '../components/Footer.astro';
-
-const pages = [
-  { name: 'Home', href: '/' },
-  { name: 'Resume', href: '/resume' },
-  { name: 'Projects', href: '/projects' },
-  { name: 'Blog', href: '/blog' },
-];
-
-const isActive = (href: string) => {
-  return Astro.url.pathname === href;
-}
-
-
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
+    <ClientRouter/>
 	</head>
-	<body class="bg-white dark:bg-gray-800 text-gray-800 dark:text-white overflow-y-scroll scroll">
+	<body class="bg-white text-gray-800 overflow-y-scroll scrollbar dark:scrollbar-dark flex flex-col min-h-screen">
     <Header/>
     <Content>
       <slot />
@@ -35,3 +24,11 @@ const isActive = (href: string) => {
     <Footer/>
 	</body>
 </html>
+
+<script>
+  const initTheme = () => {
+    const theme = localStorage.getItem('theme');
+    window.document.documentElement.dataset.theme = theme || 'light';
+  }
+  document.addEventListener('astro:page-load', initTheme);
+</script>
