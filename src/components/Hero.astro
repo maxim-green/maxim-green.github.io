@@ -1,0 +1,42 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+  data: {
+    name: string;
+    label: string;
+    summary: string;
+    location: {
+      city: string;
+      country: string;
+    }
+    image: string;
+  }
+
+}
+
+const {data} = Astro.props;
+---
+
+<div class="hero min-h-full flex justify-center items-center">
+  <div class="flex flex-row w-full px-20 py-24 card card-bordered border-gray-300 bg-base-100 shadow-sm">
+    <div class="flex flex-col flex-1 pr-16">
+      <h2 class="text-5xl font-bold pb-2">{data.name}</h2>
+      <p class="text-2xl text-gray-500 pb-6">
+        {data.label}
+      </p>
+      <p class="text-lg text-gray-400">
+        {data.summary}
+      </p>
+      <div class="mt-auto flex flex-row gap-2 text-gray-500">
+        <Icon name="location" className="h-6 w-6 " />
+        <span>{data.location.city}, {data.location.country}</span>
+      </div>
+    </div>
+    <img
+      class="w-96 h-96 rounded-2xl"
+      src={data.image}
+      alt={data.name}
+    />
+  </div>
+</div>

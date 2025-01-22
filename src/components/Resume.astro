@@ -1,7 +1,6 @@
 ---
 import resumeData from '../data/resume.json';
+import Hero from '../components/Hero.astro';
 ---
 
-<code style={{whiteSpace: 'pre-wrap'}}>
-  {JSON.stringify(resumeData, null, 4)}
-</code>
+<Hero data={resumeData.basics}/>

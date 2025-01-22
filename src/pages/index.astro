@@ -1,42 +1,10 @@
 ---
-import Card from '../components/Card.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro"
 import resumeData from '../data/resume.json';
+import Hero from '../components/Hero.astro';
 ---
 
 <Layout>
-  <article class="prose w-full flex flex-col gap-6">
-    <h2>{resumeData.basics.name}</h2>
-    <div class="flex gap-4">
-      <h3 class="m-0 w-1/3">
-        About
-      </h3>
-      <p class="m-0 w-2/3">{resumeData.basics.summary}</p>
-    </div>
-    <div class="flex gap-4">
-      <h3 class="m-0 w-1/3">
-        About
-      </h3>
-      <Card>
-        <p class="m-0 w-2/3">{resumeData.basics.summary}</p>
-      </Card>
-    </div>
-    <div class="flex gap-4">
-      <h3 class="m-0 w-1/3">
-        About
-      </h3>
-      <Card>
-        <p class="m-0 w-2/3">{resumeData.basics.summary}</p>
-      </Card>
-    </div>
-    <div class="flex gap-4">
-      <h3 class="m-0 w-1/3">
-        About
-      </h3>
-      <Card>
-        <p class="m-0 w-2/3">{resumeData.basics.summary}</p>
-      </Card>
-    </div>
-  </article>
+  <Hero data={resumeData.basics}/>
 </Layout>
 
