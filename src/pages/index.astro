@@ -2,9 +2,11 @@
 import Layout from "../layouts/Layout.astro"
 import resumeData from '../data/resume.json';
 import Hero from '../components/Hero.astro';
+import {Experience} from '../components/Experience';
 ---
 
 <Layout>
   <Hero data={resumeData.basics}/>
+  <Experience client:load data={resumeData.experience}/>
 </Layout>
 

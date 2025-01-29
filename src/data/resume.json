@@ -17,6 +17,65 @@
       "url": "https://twitter.com/john"
     }]
   },
+  "experience": [
+    {
+      "name": "Company A",
+      "position": "Frontend-developer",
+      "url": "https://company-a.com",
+      "logo": null,
+      "startDate": "2018-08-01",
+      "endDate": "2020-08-01",
+      "location": {
+        "city": "Saint-Petersburg",
+        "country": "Russia"
+      },
+      "summary": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'.",
+      "summaryDetailed": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'.\n\nEstablished\n\nIt is a long established fact that a reader will be distracted by the readable content \nIt is a long established fact that a reader will be distracted by the readable content \nIt is a long established fact that a reader will be distracted by the readable content \nIt is a long established fact that a reader will be distracted by the readable content \n\nEstablished\n\nIt is a long established fact that a reader will be distracted by the readable content \nIt is a long established fact that a reader will be distracted by the readable content \nIt is a long established fact that a reader will be distracted by the readable content \nIt is a long established fact that a reader will be distracted by the readable content ",
+      "skills": [
+        "React",
+        "Redux",
+        "TypeScript"
+      ]
+    },
+    {
+      "name": "Company B",
+      "position": "Frontend-developer",
+      "url": "https://company-b.com",
+      "logo": null,
+      "startDate": "2020-08-01",
+      "endDate": "2022-08-01",
+      "location": {
+        "city": "Saint-Petersburg",
+        "country": "Russia"
+      },
+      "summary": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'.",
+      "summaryDetailed": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'.\n\nEstablished\n\nIt is a long established fact that a reader will be distracted by the readable content \nIt is a long established fact that a reader will be distracted by the readable content \nIt is a long established fact that a reader will be distracted by the readable content \nIt is a long established fact that a reader will be distracted by the readable content \n\nEstablished\n\nIt is a long established fact that a reader will be distracted by the readable content \nIt is a long established fact that a reader will be distracted by the readable content \nIt is a long established fact that a reader will be distracted by the readable content \nIt is a long established fact that a reader will be distracted by the readable content ",
+      "skills": [
+        "React",
+        "Redux",
+        "TypeScript"
+      ]
+    },
+    {
+      "name": "Company C",
+      "position": "Frontend-developer",
+      "url": "https://company-c.com",
+      "logo": null,
+      "startDate": "2022-08-01",
+      "endDate": null,
+      "location": {
+        "city": "Saint-Petersburg",
+        "country": "Russia"
+      },
+      "summary": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'.",
+      "summaryDetailed": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'.\n\nEstablished\n\nIt is a long established fact that a reader will be distracted by the readable content \nIt is a long established fact that a reader will be distracted by the readable content \nIt is a long established fact that a reader will be distracted by the readable content \nIt is a long established fact that a reader will be distracted by the readable content \n\nEstablished\n\nIt is a long established fact that a reader will be distracted by the readable content \nIt is a long established fact that a reader will be distracted by the readable content \nIt is a long established fact that a reader will be distracted by the readable content \nIt is a long established fact that a reader will be distracted by the readable content ",
+      "skills": [
+        "React",
+        "Redux",
+        "TypeScript"
+      ]
+    }
+  ],
   "work": [{
     "name": "Company",
     "position": "President",
