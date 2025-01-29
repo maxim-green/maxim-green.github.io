@@ -12,7 +12,11 @@ export default {
         xl: '1024px',
       }
     },
-		extend: {},
+		extend: {
+      transitionProperty: {
+        height: 'height'
+      }
+    },
 	},
 	plugins: [
     require('daisyui'),
