@@ -76,6 +76,36 @@
       ]
     }
   ],
+  "skills": [
+    "react", "react", "react", "react", "react"
+  ],
+  "education": [
+    {
+      "type": "Full-time higher education",
+      "name": "Admiral Makarov State University of Maritime and Inland Shipping",
+      "specialization": "Information systems and technologies",
+      "logo": "/images/logo-guvk.png",
+      "startDate": "2006-09-01",
+      "endDate": "2011-07-01",
+      "location": {
+        "city": "Saint-Petersburg",
+        "country": "Russia"
+      }
+    },
+    {
+      "type": "Course",
+      "name": "Moscow Digital Academy",
+      "specialization": "UX/UI Design",
+      "logo": "/images/logo-mda.png",
+      "startDate": "2017-12-01",
+      "endDate": "2018-03-01",
+      "location": {
+        "city": "Saint-Petersburg",
+        "country": "Russia"
+      }
+    }
+  ],
+
   "work": [{
     "name": "Company",
     "position": "President",
@@ -98,18 +128,6 @@
       "Awarded 'Volunteer of the Month'"
     ]
   }],
-  "education": [{
-    "institution": "University",
-    "url": "https://institution.com/",
-    "area": "Software Development",
-    "studyType": "Bachelor",
-    "startDate": "2011-01-01",
-    "endDate": "2013-01-01",
-    "score": "4.0",
-    "courses": [
-      "DB1101 - Basic SQL"
-    ]
-  }],
   "awards": [{
     "title": "Award",
     "date": "2014-11-01",
@@ -128,15 +146,6 @@
     "releaseDate": "2014-10-01",
     "url": "https://publication.com",
     "summary": "Description…"
-  }],
-  "skills": [{
-    "name": "Web Development",
-    "level": "Master",
-    "keywords": [
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ]
   }],
   "languages": [{
     "language": "English",

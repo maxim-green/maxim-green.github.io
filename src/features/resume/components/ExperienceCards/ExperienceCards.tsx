@@ -79,7 +79,7 @@ export const ExperienceCards = (
         <div
           className="flex flex-row gap-6 px-12 py-9 card card-bordered border-gray-300 bg-base-100 shadow-sm">
           <div>
-            <div className="text-3xl text-gray-800 mb-1 font-bold">
+            <div className="text-3xl text-gray-700 mb-1 font-bold">
               {item.position}
             </div>
             <div className="text-2xl text-gray-400 mb-5">

@@ -3,10 +3,14 @@ import Layout from "../layouts/Layout.astro"
 import resumeData from '../data/resume.json';
 import Hero from '../features/resume/sections/Hero.astro';
 import Experience from '../features/resume/sections/Experience.astro';
+import Skills from '../features/resume/sections/Skills.astro';
+import Education from '../features/resume/sections/Education.astro';
 ---
 
 <Layout>
   <Hero data={resumeData.basics}/>
   <Experience data={resumeData.experience}/>
+  <Skills data={resumeData.skills}/>
+  <Education data={resumeData.education} />
 </Layout>
 
