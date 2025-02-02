@@ -13,17 +13,19 @@
   .scrollbar {
     /* width */
     &::-webkit-scrollbar {
-      width: 0.5rem;
+      width: 0.75rem;
     }
     
     /* Handle */
     &::-webkit-scrollbar-thumb {
-      background: #acacac;
+      background: rgb(31, 41, 55);
+      border-radius: 0.5rem;
+      border:0.125rem solid white;
     }
     
     /* Handle on hover */
     &::-webkit-scrollbar-thumb:hover {
-      background: rgb(147 197 253);
+
     }
     
     &::-webkit-scrollbar-track {

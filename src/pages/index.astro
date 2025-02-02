@@ -1,12 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro"
 import resumeData from '../data/resume.json';
-import Hero from '../components/Hero.astro';
-import {Experience} from '../components/Experience';
+import Hero from '../features/resume/sections/Hero.astro';
+import Experience from '../features/resume/sections/Experience.astro';
 ---
 
 <Layout>
   <Hero data={resumeData.basics}/>
-  <Experience client:load data={resumeData.experience}/>
+  <Experience data={resumeData.experience}/>
 </Layout>
 

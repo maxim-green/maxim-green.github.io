@@ -12,13 +12,12 @@ interface Props {
     }
     image: string;
   }
-
 }
 
 const {data} = Astro.props;
 ---
 
-<div class="hero min-h-screen flex justify-center items-center">
+<section class="hero my-24 flex justify-center items-center">
   <div class="flex flex-row w-full px-20 py-24 card card-bordered border-gray-300 bg-base-100 shadow-sm">
     <div class="flex flex-col flex-1 pr-16">
       <h2 class="text-5xl font-bold pb-2">{data.name}</h2>
@@ -39,4 +38,4 @@ const {data} = Astro.props;
       alt={data.name}
     />
   </div>
-</div>
+</section>

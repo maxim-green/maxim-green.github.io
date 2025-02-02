@@ -47,7 +47,7 @@ const Chevron = (
   );
 }
 
-export const Experience = (
+export const ExperienceCards = (
   {data}: Props
 ) => {
   const [openedIndexes, setOpenedIndexes] = useState<number[]>([]);
