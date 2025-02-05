@@ -26,15 +26,31 @@ interface Props {
 export const ExperienceCards = (
   {data}: Props
 ) => {
-  return <div className="relative flex flex-col gap-12">
+  const line = <div className="absolute w-[1px] h-full left-[250px]">
     <div
-      className="absolute w-[1px] h-full left-[250px] border-l-gray-400 border-dashed border-l-[1px]"
+      className="absolute w-full h-32 bg-white top-0 left-0 z-10"
+      style={{
+        background: "linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%)"
+      }}
     />
-    {data.map((item, i) => {
-      return <ExperienceCard
+    <div
+      className="absolute w-full h-full left-0 border-l-gray-400 border-dashed border-l-[1px] z-0"
+    />
+    <div
+      className="absolute w-full h-32 bg-white bottom-0 left-0 z-10"
+      style={{
+        background: "linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%)"
+      }}
+    />
+  </div>
+
+  return <div className="relative flex flex-col gap-12">
+    {line}
+    {data.map((item) => (
+      <ExperienceCard
         key={item.name}
         data={item}
       />
-    })}
+    ))}
   </div>
 }
