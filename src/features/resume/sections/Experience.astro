@@ -1,5 +1,9 @@
 ---
 import {ExperienceCards} from '../components/ExperienceCards';
+import { getCollection } from 'astro:content';
+
+const d = await getCollection('experience');
+console.log('LOG:Experience.astro:6', d)
 
 interface Props {
   data: {
@@ -28,3 +32,7 @@ const {data} = Astro.props;
   </h2>
   <ExperienceCards client:load data={data}/>
 </section>
+
+<script>
+  console.log('LOG:Experience.astro:36', 123)
+</script>
