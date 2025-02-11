@@ -2,7 +2,55 @@
   {
     "id": "react",
     "name": "React",
-    "description": "The library for web and native user interfaces",
+    "description": "Library for web and native user interfaces",
+    "logo": "/images/logo-react.png"
+  },
+  {
+    "id": "typescript",
+    "name": "TypeScript",
+    "description": "Strongly typed programming language that builds on JavaScript",
+    "logo": "/images/logo-react.png"
+  },
+  {
+    "id": "redux",
+    "name": "Redux",
+    "description": "Library for predictable and maintainable global state management",
+    "logo": "/images/logo-react.png"
+  },
+  {
+    "id": "mobx",
+    "name": "MobX",
+    "description": "Library that makes state management simple and scalable by transparently applying functional reactive programming",
+    "logo": "/images/logo-react.png"
+  },
+  {
+    "id": "webpack",
+    "name": "Webpack",
+    "description": "Static module bundler for modern JavaScript applications",
+    "logo": "/images/logo-react.png"
+  },
+  {
+    "id": "nodejs",
+    "name": "Node.js",
+    "description": "Free, open-source, cross-platform JavaScript runtime environment",
+    "logo": "/images/logo-react.png"
+  },
+  {
+    "id": "html",
+    "name": "HTML",
+    "description": "Standard markup language for documents designed to be displayed in a web browser",
+    "logo": "/images/logo-react.png"
+  },
+  {
+    "id": "scss",
+    "name": "SASS/SCSS",
+    "description": "Stylesheet language that’s compiled to CSS",
+    "logo": "/images/logo-react.png"
+  },
+  {
+    "id": "git",
+    "name": "Git",
+    "description": "Free and open source distributed version control system",
     "logo": "/images/logo-react.png"
   }
 ]
