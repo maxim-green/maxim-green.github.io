@@ -2,7 +2,7 @@
 company: "ДЭФО"
 position: "Low-code developer"
 description: "Engaged in the support and development of the Service Desk system on the ITSM 365 platform"
-website: "www.defo.ru"
+website: "defo.ru"
 logo: "/images/logo-defo.png"
 startDate: "2019-08-01"
 endDate: "2022-08-01"
