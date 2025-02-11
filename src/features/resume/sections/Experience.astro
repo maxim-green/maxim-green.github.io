@@ -3,7 +3,6 @@ import {ExperienceCards} from '../components/ExperienceCards';
 import { getCollection } from 'astro:content';
 
 const d = await getCollection('experience');
-console.log('LOG:Experience.astro:6', d)
 
 interface Props {
   data: {
@@ -31,16 +30,12 @@ const data2 = d.map(item => ({
 
 ---
 
-<section class="my-12">
+<section class="my-16">
   <h2 class="text-4xl font-bold mb-8">
     Experience
   </h2>
   <ExperienceCards client:load data={data2}/>
 </section>
-
-<script>
-  console.log('LOG:Experience.astro:36', 123)
-</script>
 
 
 

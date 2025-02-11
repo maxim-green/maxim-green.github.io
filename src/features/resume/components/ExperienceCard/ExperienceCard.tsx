@@ -134,6 +134,7 @@ export const ExperienceCard = (
           {skills && <div className="flex flex-row flex-wrap gap-3 mb-5">
             {skills.map(item => (
               <div
+                key={item}
                 className="flex items-center shrink-0 h-7 px-4 text-sm text-gray-500 border whitespace-nowrap rounded-full">
                 {item}
               </div>
