@@ -56,7 +56,7 @@ export const ExperienceCard = (
   }: CardProps
 ) => {
   const {company, position, description, skills, website, body, location, startDate, endDate} = data;
-  console.log('LOG:ExperienceCard.tsx:59', website)
+
   const ref = useRef<{ heightOpened?: number, heightClosed?: number }>({});
   const wrapperRef = useRef<HTMLDivElement>(null);
   const [initialized, setInitialized] = useState(false);

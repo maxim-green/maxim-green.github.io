@@ -47,11 +47,17 @@ export const ExperienceCards = (
 
   return <div className="relative flex flex-col gap-12">
     {line}
-    {data.map((item) => (
-      <ExperienceCard
-        key={item.id}
-        data={item}
-      />
-    ))}
+    {data
+      .sort((itemA, itemB) => {
+        const timeA = new Date(itemA.startDate).getTime();
+        const timeB = new Date(itemB.startDate).getTime();
+        return timeB - timeA;
+      })
+      .map((item) => (
+        <ExperienceCard
+          key={item.id}
+          data={item}
+        />
+      ))}
   </div>
 }
