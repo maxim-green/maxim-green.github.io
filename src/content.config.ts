@@ -8,7 +8,7 @@ const experience = defineCollection({
     company: z.string(),
     position: z.string(),
     description: z.string().optional(),
-    url: z.string().optional(),
+    website: z.string().optional(),
     logo: z.string().optional(),
     startDate: z.string(),
     endDate: z.string().optional(),

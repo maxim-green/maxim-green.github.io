@@ -6,9 +6,11 @@ interface CardData {
   company: string,
   description?: string,
   body?: string,
+  website?: string,
   position: string,
   startDate: string,
   endDate?: string,
+  skills?: string[],
   location: {
     city: string,
     country: string
@@ -53,8 +55,8 @@ export const ExperienceCard = (
     onReady
   }: CardProps
 ) => {
-  const {company, position, description, body, location, startDate, endDate} = data;
-
+  const {company, position, description, skills, website, body, location, startDate, endDate} = data;
+  console.log('LOG:ExperienceCard.tsx:59', website)
   const ref = useRef<{ heightOpened?: number, heightClosed?: number }>({});
   const wrapperRef = useRef<HTMLDivElement>(null);
   const [initialized, setInitialized] = useState(false);
@@ -112,24 +114,51 @@ export const ExperienceCard = (
           <div className="text-3xl text-gray-700 mb-1 font-bold">
             {position}
           </div>
-          <div className="text-2xl text-gray-400 mb-5">
+          <div className="text-2xl text-gray-400 mb-4 flex flex-row items-center gap-4">
             {company}
+            {website && <a
+              href={`https://${website}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-lg text-blue-500 inline-flex gap-1 items-center"
+            >
+              {website}
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                   viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+                   className="size-4">
+                <path strokeLinecap="round" strokeLinejoin="round"
+                      d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/>
+              </svg>
+            </a>}
           </div>
-          <div className={"text-gray-400 prose"}>
-            {description}
+          {skills && <div className="flex flex-row flex-wrap gap-3 mb-5">
+            {skills.map(item => (
+              <div
+                className="flex items-center shrink-0 h-7 px-4 text-sm text-gray-500 border whitespace-nowrap rounded-full">
+                {item}
+              </div>
+            ))}
+          </div>}
+          <div className="prose text-gray-400">
+            <div>
+              {description}
+            </div>
+            {body && (opened || initialized) && <div
+              className="text-gray-400 transition-opacity overflow-hidden"
+              style={{
+                opacity: opened ? 1 : 0,
+              }}
+              dangerouslySetInnerHTML={{__html: body}}
+            />}
           </div>
-          {body && (opened || initialized) && <div
-            className="prose text-gray-400 transition-opacity overflow-hidden"
-            style={{
-              opacity: opened ? 1 : 0,
-            }}
-            dangerouslySetInnerHTML={{__html: body}}
-          />}
         </div>
         <button
-          className="block h-8 w-8 p-0 m-0 mt-[69px]"
+          className="block h-8 w-8 p-0 m-0"
           onClick={() => {
             setOpened(o => !o);
+          }}
+          style={{
+            marginTop: (ref.current.heightClosed || 0) / 2 - 48
           }}
         >
           <Chevron direction={opened ? 'up' : 'down'}/>

@@ -10,7 +10,7 @@ interface Props {
     description?: string,
     body?: string,
     position: string,
-    url?: string,
+    website?: string,
     logo?: string,
     startDate: string,
     endDate?: string,
