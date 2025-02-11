@@ -1,5 +1,5 @@
 ---
-name: "ДЭФО"
+company: "ДЭФО"
 position: "Low-code developer"
 description: "Engaged in the support and development of the Service Desk system on the ITSM 365 platform"
 url: "https://www.defo.ru/"

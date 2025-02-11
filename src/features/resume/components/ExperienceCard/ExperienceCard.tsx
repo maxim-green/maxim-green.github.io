@@ -2,12 +2,13 @@ import {useEffect, useRef, useState} from 'react';
 import {clsx} from 'clsx';
 
 interface CardData {
-  name: string,
+  id: string,
+  company: string,
+  description?: string,
+  body?: string,
   position: string,
-  summary: string,
-  summaryDetailed: string | null,
   startDate: string,
-  endDate: string | null,
+  endDate?: string,
   location: {
     city: string,
     country: string
@@ -52,7 +53,7 @@ export const ExperienceCard = (
     onReady
   }: CardProps
 ) => {
-  const {name, position, summary, summaryDetailed, location, startDate, endDate} = data;
+  const {company, position, description, body, location, startDate, endDate} = data;
 
   const ref = useRef<{ heightOpened?: number, heightClosed?: number }>({});
   const wrapperRef = useRef<HTMLDivElement>(null);
@@ -112,19 +113,18 @@ export const ExperienceCard = (
             {position}
           </div>
           <div className="text-2xl text-gray-400 mb-5">
-            {name}
+            {company}
           </div>
-          <div className={clsx('text-gray-400')}>
-            {summary}
+          <div className={"text-gray-400 prose"}>
+            {description}
           </div>
-          {(opened || initialized) && <div
-            className="text-gray-400 transition-opacity overflow-hidden"
+          {body && (opened || initialized) && <div
+            className="prose text-gray-400 transition-opacity overflow-hidden"
             style={{
               opacity: opened ? 1 : 0,
             }}
-          >
-            {summaryDetailed}
-          </div>}
+            dangerouslySetInnerHTML={{__html: body}}
+          />}
         </div>
         <button
           className="block h-8 w-8 p-0 m-0 mt-[69px]"

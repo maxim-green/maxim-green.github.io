@@ -5,19 +5,20 @@ import {ExperienceCard} from '../ExperienceCard/ExperienceCard.tsx';
 
 interface Props {
   data: {
-    name: string,
+    id: string,
+    company: string,
+    description?: string,
+    body?: string,
     position: string,
-    url: string,
-    logo: string | null,
+    url?: string,
+    logo?: string,
     startDate: string,
-    endDate: string | null,
+    endDate?: string,
     location: {
       city: string,
       country: string
     },
-    summary: string,
-    summaryDetailed: string | null,
-    skills: string[] | null
+    skills: string[]
   }[]
 }
 
@@ -48,7 +49,7 @@ export const ExperienceCards = (
     {line}
     {data.map((item) => (
       <ExperienceCard
-        key={item.name}
+        key={item.id}
         data={item}
       />
     ))}

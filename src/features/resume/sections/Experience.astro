@@ -17,22 +17,46 @@ interface Props {
       city: string,
       country: string
     },
-    summary: string,
-    summaryDetailed: string | null,
+    description: string,
+    body: string | null,
     skills: string[] | null
   }[]
 }
 
-const {data} = Astro.props;
+const data2 = d.map(item => ({
+  ...item.data,
+  id: item.id,
+  body: item.rendered?.html,
+}))
+
 ---
 
 <section class="my-12">
   <h2 class="text-4xl font-bold mb-8">
     Experience
   </h2>
-  <ExperienceCards client:load data={data}/>
+  <ExperienceCards client:load data={data2}/>
 </section>
 
 <script>
   console.log('LOG:Experience.astro:36', 123)
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

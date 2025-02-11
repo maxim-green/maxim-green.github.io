@@ -1,11 +1,10 @@
 ---
-name: "Luxms BI"
+company: "Luxms BI"
 position: "Frontend developer"
 description: "Worked in a team, closely collaborating with developers, designers, project managers, data engineers, and testers. Was responsible for layout design, development of database query logic, their visualization, debugging, and participation in project deployment on the client's resources. Successfully completed several projects for major Russian companies in the financial, gas, and transportation sectors"
 url: "https://luxmsbi.com/en/"
 logo: "/images/logo-luxmsbi.png"
 startDate: "2022-08-01"
-endDate: null
 location: {
   city: "Saint-Petersburg",
   country: "Russia"
